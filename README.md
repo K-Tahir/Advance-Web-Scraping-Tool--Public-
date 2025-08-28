@@ -1,5 +1,5 @@
 # Advance Web Scraping Tool (Public)
-# Advance Web Scraping Tool
+
 The Web Scraping Tool is a GUI-based application built with Python + CustomTkinter that allows users to easily scrape websites without coding knowledge.
 It supports multiple data types (text, links, images, tables, forms) and saves results in different formats for professional use.
 
