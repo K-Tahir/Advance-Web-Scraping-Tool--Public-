@@ -1,76 +1,308 @@
-# Advance Web Scraping Tool (Public)
+# Advance Web Scraping Tool
 
-The Web Scraping Tool is a GUI-based application built with Python + CustomTkinter that allows users to easily scrape websites without coding knowledge.
-It supports multiple data types (text, links, images, tables, forms) and saves results in different formats for professional use.
+A professional GUI-based Web Scraping Application built with Python and CustomTkinter that enables users to scrape both static and dynamic websites without writing code.
 
-:- Key Features
->URL Manager – Add, save, and manage multiple URLs.
->Scraping Options – Extract text, links, images, tables, and form data.
->File Storage – Save extracted data into:
+The tool provides a visual interface for extracting structured and unstructured web data, supports pagination, custom selectors, dynamic JavaScript-rendered pages, and exports data into multiple industry-standard formats.
 
-CSV
-Excel
-TXT
-Word
+---
 
->User-Friendly GUI – Built with CustomTkinter for a clean, modern interface.
->Modular Codebase – Separate modules (url_manager.py, scraper.py, storage.py, gui.py) for easy maintenance.
->Tested on Real Websites – Handles Wikipedia pages, blogs, and data-rich sites.
+## Features
 
-:- Tech Stack
+### URL Management
 
-Python (Core language)
+* Add and manage multiple URLs
+* Save URLs locally
+* Reload saved URLs instantly
+* Quick URL selection for scraping sessions
 
-CustomTkinter (GUI)
+### Static Website Scraping
 
-Requests (HTTP requests)
+Extract common website elements with a single click:
 
-BeautifulSoup4 (HTML parsing)
+* Headings (H1–H6)
+* Paragraphs
+* Hyperlinks
+* Images
+* HTML Tables
+* Metadata
 
-Pandas (Table handling & DataFrames)
+### Dynamic Website Scraping
 
-OpenPyXL (Excel writing)
+Supports JavaScript-rendered websites using Selenium.
 
-python-docx (Word file export)
+Capabilities include:
 
-:- Architecture / Flow
+* Headless Chrome execution
+* Dynamic content extraction
+* Multi-page scraping
+* Pagination support
+* Automated page navigation
+* Custom field extraction
 
-User enters or selects URL from URL Manager.
+### Custom Selector Engine
 
-Scraper module fetches and parses data.
+Users can define:
 
-User selects data type to extract (links, images, tables, etc.).
+* HTML Tags
+* Attributes
+* Attribute Values
+* Extraction Types
 
-Storage module saves data in chosen format.
+Supported extraction:
 
-User opens results via FileDialog for review.
+* Text
+* href
+* src
+* alt
+* data-src
+* data-id
 
- Future Roadmap
+### Container-Based Scraping
 
- User login system
+Extract structured records from repeating card layouts.
 
- Scraping dynamic pages (Selenium / Playwright)
+Examples:
 
- API scraping support
+* Product Listings
+* Job Portals
+* E-commerce Websites
+* Real Estate Platforms
+* Directory Websites
 
- Automation & scheduling
+### Multi-Threaded Operations
 
- Login scraping (authenticated sessions)
+The GUI remains responsive while scraping is running.
 
- Database integration (SQLite/PostgreSQL)
+Benefits:
 
- Analytics dashboard
+* Non-blocking interface
+* Better user experience
+* Real-time status updates
 
-:- Version History
+### Export Formats
 
-v1 – Basic GUI + URL input
+Extracted data can be saved as:
 
-v2 – Scraping text, links, images
+* Excel (.xlsx)
+* CSV (.csv)
+* JSON (.json)
+* Word (.docx)
+* Text (.txt)
 
-v3 – Table & form scraping + CSV/Excel export
+### Modern User Interface
 
-v4 (Stable Release) – Added TXT & Word storage + polished structure
+Built using CustomTkinter:
 
-:- Author
+* Dark Theme Design
+* Sidebar Navigation
+* Professional Layout
+* User-Friendly Workflow
+* Branding Support
 
-Tahir Khan – Python & Backend Developer
+---
+
+## Technology Stack
+
+### Core
+
+* Python
+
+### GUI
+
+* CustomTkinter
+* Tkinter
+
+### Web Scraping
+
+* Requests
+* BeautifulSoup4
+* Selenium
+
+### Data Processing
+
+* Pandas
+
+### File Handling
+
+* OpenPyXL
+* JSON
+* python-docx
+
+### Browser Automation
+
+* ChromeDriver
+* Headless Chrome
+
+### Image Handling
+
+* Pillow (PIL)
+
+### Concurrency
+
+* Threading
+
+---
+
+## Project Architecture
+
+```text
+Advance_Web_Scraping_Tool/
+
+│
+├── appV3.py
+│
+├── ScraperV3.py
+│   ├── Static Scraping
+│   ├── Metadata Extraction
+│   ├── Table Extraction
+│   └── Link/Image Extraction
+│
+├── dynamic_scraper.py
+│   ├── Selenium Integration
+│   ├── Pagination Handling
+│   ├── Container Selection
+│   ├── Dynamic Content Extraction
+│   └── Custom Field Extraction
+│
+├── StorageV3.py
+│   ├── Excel Export
+│   ├── CSV Export
+│   ├── JSON Export
+│   ├── DOCX Export
+│   └── TXT Export
+│
+├── url_managerV3.py
+│   ├── URL Storage
+│   ├── URL Loading
+│   └── URL Management
+│
+└── Assets
+    ├── Logo
+    └── Icons
+```
+
+---
+
+## Application Workflow
+
+### Static Scraping Flow
+
+1. Add or Load URL
+2. Select Scraping Options
+3. Start Scraping
+4. Extract Data
+5. Export Results
+
+### Dynamic Scraping Flow
+
+1. Enter Dynamic URL
+2. Define Pagination Pattern
+3. Configure Container Selector
+4. Define Fields to Extract
+5. Launch Headless Browser
+6. Extract Data
+7. Save Results
+
+---
+
+## Example Use Cases
+
+### E-Commerce Scraping
+
+Extract:
+
+* Product Names
+* Prices
+* Ratings
+* Product Links
+* Images
+
+### Job Portal Scraping
+
+Extract:
+
+* Job Titles
+* Company Names
+* Locations
+* Salary Information
+
+### News Website Scraping
+
+Extract:
+
+* Headlines
+* Articles
+* Metadata
+* Links
+
+### Research and Data Collection
+
+Extract:
+
+* Tables
+* Structured Records
+* Web Metadata
+* Large Datasets
+
+---
+
+## Future Roadmap
+
+### Planned Features
+
+* Proxy Rotation
+* User-Agent Rotation
+* Scheduled Scraping
+* SQLite Integration
+* PostgreSQL Integration
+* Scraping Templates
+* Login Authentication Support
+* CAPTCHA Detection
+* Playwright Integration
+* API Data Extraction
+* Data Cleaning Module
+* Analytics Dashboard
+* Project Export Profiles
+
+---
+
+## Version History
+
+### v1
+
+* Basic GUI
+* Single URL Scraping
+
+### v2
+
+* Links and Images Extraction
+
+### v3
+
+* Tables and Metadata Support
+
+### v4
+
+* Multi-format Export
+
+### v5
+
+* Dynamic Scraping Module
+* Selenium Integration
+* Pagination Support
+* Container-Based Extraction
+* Custom Field Selection
+* Sidebar Architecture
+* Multi-threaded Execution
+
+---
+
+## Author
+
+### Tahir Khan
+
+Python Developer | Web Scraping Enthusiast | Backend Developer
+
+Built as a practical project to explore professional web scraping, browser automation, structured data extraction, and GUI application development.
+
+Powered by Infotech Xplorer.
